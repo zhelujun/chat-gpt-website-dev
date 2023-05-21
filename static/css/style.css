@@ -34,6 +34,9 @@ body {
   .container {
     width: 100% !important;
   }
+  .answer{
+    height: calc(100vh - 145px) !important;
+  }
   .answer .others .common .settings-common span{
     font-size: 85%;
   }
@@ -112,7 +115,7 @@ pre{
 .answer{
   width: 100%;
   position: relative;
-  height: 75vh;
+  height: calc(100vh - 165px);
 }
 
 .answer .tips{
@@ -287,7 +290,7 @@ input[type="checkbox"]:checked + .check-trail .check-handler::before {
 }
 
 .answer #chatWindow {
-  max-height: calc(75vh - 100px);
+  max-height: calc(100% - 100px);
   height:auto;
   overflow-y: auto;
 }
