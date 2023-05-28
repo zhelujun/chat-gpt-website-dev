@@ -4,19 +4,18 @@
 
 简易版 `ChatGPT` 网站，拿来即用，适合小白，让你十分钟搭建属于自己的 `ChatGPT` 问答机器人！
 
-## 安装教程
-
-本项目是我的`ChatGPT-website`纯前端版本，可以使用`gitee pages`或者 `github pages`零成本快速部署！
 
 ## 使用说明
 
-1.  本项目使用`GPT-3.5-turbo`,支持记录上下文实现连续对话！
+1. 本项目是我的`ChatGPT-website`纯前端版本，可以使用`gitee pages`或者 `github pages`零成本快速部署！
 
-2.  本项目支持流式响应，`markdown`实时转换为`html`！
+2.  本项目使用`GPT-3.5-turbo`,支持记录上下文实现连续对话！
 
-3.  由于`openai`的`api`地区限制问题，本项目使用现成开源api代理。
+3.  本项目支持流式响应，`markdown`实时转换为`html`！
 
-4.  使用现有开源`api`代理，则只需在`config.js`文件中加入自己的 `openai` 的`api key`即可，然后使用`gitee pages`或者 `github pages`部署就行！
+4.  由于`openai`的`api`地区限制问题，本项目使用现成开源api代理。
+
+5.  使用现有开源`api`代理，则只需在`config.js`文件中加入自己的 `openai` 的`api key`即可，然后使用`gitee pages`或者 `github pages`部署就行！
 当然，不能将`apikey`暴露在仓库中，`github`目前会识别，然后会给你发邮件，这个`apikey`会失效，则需要重新生成。下面我会给出解决方案！
 
 
@@ -52,7 +51,11 @@ let decodedData = atob(encodedData);
 console.log(decodedData);  // 输出: hello world
 ```
 
-你也可以自定义加密解密规则，当然无论是否加密，我都不建议在custom.js文件中填写apiKey，有心之人防不住，容易泄露！这只是为了防止github识别的方案，建议直接部署后在首页填入自己的apiKey使用。如需对外提供服务，请使用项目后端版本（后端版本为flask项目，也可借助某些云平台也可实现零成本部署），因为此项目前端版本为纯静态，对外开放按上述方案依旧会使得Key泄露，且请求 `open ai` 接口是用户本地浏览器发送的，只能使用代理 `api`。感兴趣的可贡献node后端，使用Vercel也可更好的零成本部署。总之纯前端版本流式响应效果不好，需要速度快点的建议使用后端版本或者用 Vercel 代替github pages!
+你也可以自定义加密解密规则，当然无论是否加密，我都不建议在custom.js文件中填写apiKey，有心之人防不住，容易泄露！
+这只是为了防止github识别的方案，建议直接部署后在首页填入自己的apiKey使用。
+如需对外提供服务，请使用项目后端版本（后端版本为flask项目，也可借助某些云平台也可实现零成本部署），因为此项目前端版本为纯静态，对外开放按上述方案依旧会使得Key泄露，且请求 `openai` 接口是用户本地浏览器发送的，只能使用代理 `api`。
+感兴趣的可贡献node后端，使用Vercel也可更好的零成本部署。
+总之纯前端版本流式响应效果不好，需要速度快点的建议使用后端版本或者用 Vercel 代替 github pages!
 
 ## 23 年 5.12 日更新
 
@@ -75,7 +78,7 @@ console.log(decodedData);  // 输出: hello world
 3. 项目使用开源代理：[https://github.com/geekr-dev/openai-proxy](https://github.com/geekr-dev/openai-proxy) ，点个 `star` 支持作者
 4. 此项目适合小白，主打简洁，可不断完善！
 5. 对于项目如有疑问，可加下面 `QQ` 群交流！
-6. 体验地址：我用的是 `github pages` -> : [https://aniuyyds.github.io/ChatGPT-website/](https://aniuyyds.github.io/ChatGPT-website/)
+6. 体验地址：我用的是 `github pages` -> : https://aniuyyds.github.io/chat-gpt-website/
 7.  部署教程：https://blog.csdn.net/qq_57421630/article/details/130040548
 8.  项目后端版本：https://gitee.com/aniu-666/chat-gpt-website/tree/master/
 
@@ -107,4 +110,3 @@ console.log(decodedData);  // 输出: hello world
         <td ><center><img src="./%E9%A1%B9%E7%9B%AE%E7%A4%BA%E4%BE%8B%E5%9B%BE/%E6%89%8B%E6%9C%BA%E7%AB%AF%E5%9B%BE%E4%BA%8C.png" width="400">图2</center></td>
     </tr>
 </table>
-
