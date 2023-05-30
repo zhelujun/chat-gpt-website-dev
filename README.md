@@ -4,19 +4,16 @@
 
 简易版 `ChatGPT` 网站，拿来即用，适合小白，让你十分钟搭建属于自己的 `ChatGPT` 问答机器人！
 
-## 安装教程
-
-本项目后端用 `flask` 快速搭建，可使用宝塔面板中的python项目管理器快速部署！
 
 ## 使用说明
 
-1. 本项目支持 `GPT-3.5-turbo` 和 `GPT-4`，支持记录上下文实现连续对话！
+1. 本项目后端用 `flask` 快速搭建，可使用宝塔面板中的python项目管理器快速部署！
 
-2. 本项目支持流式响应，`markdown` 实时转换为 `html`！
+2. 本项目支持 `GPT-3.5-turbo` 和 `GPT-4`，支持记录上下文实现连续对话！
 
-3. 由于 `OpenAI` 的 `api` 地区限制问题，项目部署请使用国外服务器，本项目使用现成开源 api 代理，只需替换 api 域名，可在大陆服务器部署。（使用 `OpenAI` 官方 `api` 在本地跑此项目，使用代理对于 `python` 可能会出现 `ssl error` 问题，因此不建议在国内服务器上使用代理软件，建议使用现成的代理或者直接部署到国外服务器）。
+3. 本项目支持流式响应，`markdown` 实时转换为 `html`！
 
-4. 使用现有开源 `api` 代理，则只需在 `settings.py` 配置文件中加入自己的 `OpenAI`  的 `api key` 即可，然后部署到大陆服务器就行！如有条件部署到国外服务器，请使用 `settings.py` 配置文件中的 `OpenAI` 官方 `api` 接口。
+4. 由于 `OpenAI` 的 `api` 地区限制问题, 使用现有开源 `api` 代理，则只需在 `settings.py` 配置文件中加入自己的 `OpenAI`  的 `api key` 即可，然后部署到大陆服务器就行！如有条件部署到国外服务器，请使用 `settings.py` 配置文件中的 `OpenAI` 官方 `api` 接口。
 
 ## 23 年 5.12 日更新
 
@@ -37,15 +34,33 @@
  2. 添加 `GPT-4` 模型，需要有 `gpt-4` 权限的 `api key`。
  3. 添加停止响应按钮，输出结果不满意可停止响应。
 
+## 部署教程
+
+这里有三种方式：
+
+ 1. 有自己的服务器，请看：[https://guanzhu-aniu.blog.csdn.net/article/details/129913170](https://guanzhu-aniu.blog.csdn.net/article/details/129913170)
+ 2. 无自己的服务器（零成本部署），请看：[https://guanzhu-aniu.blog.csdn.net/article/details/130912951](https://guanzhu-aniu.blog.csdn.net/article/details/130912951)
+ 3. 可使用`github pages` 或者 `Vercel` 部署的纯前端静态版本（零成本部署）：https://gitee.com/aniu-666/chat-gpt-website/tree/web/
+
+三种部署方式说明：
+
+方式 | 说明
+----- | -----
+方式一: 有自己的服务器|如果服务器在国内，则要使用代理`api`，且只能用`ip`访问，不能绑定域名，因为`gpt`服务备案无法审核通过；如果有国外服务器，那最好，使用`openai`官方`api`就行，也可绑定域名！
+方式二：无自己的服务器|使用`render`云平台零成本部署`flask`项目，只需`fork` `github`镜像仓库即可，具体请看上面部署教程里的链接，缺点是平台限制最大只能流式响应30秒，但不影响，输入“继续”让 chatgpt 继续输出就行！
+方式三：纯前端静态版本|功能较方式一和方式二少一点，且是纯静态，因此网络请求是本地浏览器发送的，只能使用代理`api`，一旦代理`api`不能用了，就不能用了。
+
+我比较推荐使用方式一的国外服务器，但国外服务器价格昂贵，香港和台湾的服务器也行，可以不用备案绑定域名，需要注意的是这两个地方也不能访问`openai`官方`api`，因此`settings.py`中要使用代理`api`。
+白嫖党可以使用方式二，只不过流式响应30秒，体验较方式一差点。
+方式三也没有流式响应时间限制，缺点是容易暴露`apikey`。
+
 ## 注意
 
 1. 开发不易，拒绝白嫖，如果此小项目帮助到了您，希望能得到您的 `star` ！
 2. 页面可任各位修改，希望留下项目地址，为此项目吸引更多的 `star` !
-3. 项目使用开源代理：[https://github.com/geekr-dev/openai-proxy](https://github.com/geekr-dev/openai-proxy) ，点个 `star` 支持作者
+3. 项目使用的开源代理：[https://github.com/geekr-dev/openai-proxy](https://github.com/geekr-dev/openai-proxy) ，点个 `star` 支持作者
 4. 此项目适合小白，主打简洁，可不断完善！
 5. 对于项目如有疑问，可加下面 `QQ` 群交流！
-6. 部署教程：https://blog.csdn.net/qq_57421630/article/details/129913170
-7. 项目纯前端版本（零成本部署）：https://gitee.com/aniu-666/chat-gpt-website/tree/web/
 
 ## 学习交流 
 
