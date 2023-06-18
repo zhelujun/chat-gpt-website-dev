@@ -38,7 +38,7 @@
 
 这里有三种方式：
 
- 1. 有自己的服务器，请看：[https://guanzhu-aniu.blog.csdn.net/article/details/129913170](https://guanzhu-aniu.blog.csdn.net/article/details/129913170)
+ 1. 有自己的服务器，请看：[https://docs.qq.com/doc/DZkhVeEZhbmJpaEp6](https://docs.qq.com/doc/DZkhVeEZhbmJpaEp6)
  2. 无自己的服务器（零成本部署），请看：[https://github.com/Aniuyyds/ChatGPT-website](https://github.com/Aniuyyds/ChatGPT-website)
  3. 可使用`github pages` 或者 `Vercel` 部署的纯前端静态版本（零成本部署）：https://gitee.com/aniu-666/chat-gpt-website/tree/web/
 
